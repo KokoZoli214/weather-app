@@ -51,12 +51,12 @@ const Inputs = ({ setQuery, error }) => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-full sm:w-3/4 lg:w-1/2 lg:h-25 bg-blue-400 opacity-75 pt-6 lg:pt-0">
+    <div className="flex flex-col justify-center items-center w-full sm:w-3/4 md:w-5/6 lg:w-1/2 lg:h-25 bg-blue-400 opacity-75 pt-6 lg:pt-0">
       <div className="flex flex-row justify-center items-center gap-3">
         <input
           type="text"
           placeholder="searching a city..."
-          className="bg-white text-gray-500 sm:text-xs lg:text-xl font-light rounded-2xl p-2 w-full shadow-xl capitalize focus:outline-none placeholder:lowercase"
+          className="bg-white text-gray-500 sm:text-xs md:text-2xl lg:text-xl font-light rounded-2xl p-2 w-full shadow-xl capitalize focus:outline-none placeholder:lowercase"
           onChange={(e) => setCity(e.target.value)}
           value={city}
           onKeyDown={handleKeyDown}

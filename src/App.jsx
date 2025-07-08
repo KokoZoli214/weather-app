@@ -13,6 +13,8 @@ const App = () => {
   const [query, setQuery] = useState({ q: 'Budapest' });
 
   useEffect(() => {
+
+    
     const fetchWeather = async () => {
       const data = await getFormattedWeatherData(query);
       setWeather(data);
@@ -21,7 +23,12 @@ const App = () => {
     fetchWeather();
   }, [query]);
 
-  if (!weather) return <p>Betöltés...</p>;
+  
+  if (!weather) return <div 
+  className="app-container w-screen h-screen flex flex-col justify-center items-center bg-[url('/img/weather1.jpg')] bg-cover bg-center text-amber-50" 
+  >
+    {}
+  </div>;
 
   return (
     <div className="app-container w-screen h-screen flex flex-col justify-center items-center bg-[url('/img/weather1.jpg')] bg-cover bg-center text-amber-50" >

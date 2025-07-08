@@ -19,12 +19,12 @@ const CityMap = ({ weather }) => {
   const { lat, lon } = weather.coord;
 
   return (
-    <div className="flex justify-center w-1/2 h-1/4 bg-blue-400 opacity-75 hidden sm:flex">
+    <div className="flex justify-center hidden w-1/2 h-1/4 bg-blue-400 opacity-75 sm:flex md:w-5/6 lg:w-1/2 md:pt-2">
       <div className="w-2/3 rounded-2xl">
         <MapContainer
           center={[lat, lon]}
           zoom={10}
-          style={{ height: "100%", width: "90%", borderRadius: "1rem" }}
+          style={{ height: "100%", width: "100%", borderRadius: "1rem" }}
           scrollWheelZoom={false}
         >
           <TileLayer

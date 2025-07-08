@@ -68,7 +68,7 @@ const TempAndDetails = ({ weather }) => {
   ];
 
   return (
-    <div className="flex flex-col w-full h-50 lg:w-1/2 bg-blue-400 opacity-75">
+    <div className="flex flex-col w-full h-50 md:w-5/6 lg:w-1/2 bg-blue-400 opacity-75">
         {/* Celsius és farenhein váltása */}
 
       {/* <div className='flex flex-row w-full items-center justify-end pr-5 mb-2'>
@@ -88,11 +88,11 @@ const TempAndDetails = ({ weather }) => {
           alt="weather icon"
         />
 
-        <div className="flex items-center justify-center py-6 sm:text-xs lg:text-3xl">
+        <div className="flex items-center justify-center py-6 sm:text-xs md:text-2xl lg:text-3xl">
           <p>{weather.weather[0].main}</p>
         </div>
 
-        <p className="sm:text-2xl lg:text-4xl">
+        <p className="sm:text-2xl md:text-3xl lg:text-4xl">
           {Math.round(weather.main.temp)}°C
         </p>
 
@@ -110,7 +110,7 @@ const TempAndDetails = ({ weather }) => {
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-center sm:space-x-2 lg:space-x-10 text-sm py-3 pt-5 lg:pt-0">
+      <div className="flex flex-row items-center justify-center sm:space-x-2 lg:space-x-10 text-sm md:text-lg py-3 pt-5 lg:pt-0">
         {horisontalDetails.map(({ id, Icon, title, value }) => (
           <div key={id} className="flex flex-row items-end lg:items-center">
             <Icon className="w-6 h-6 sm:w-10 sm:h-10 lg:w-10 lg:h-10" />

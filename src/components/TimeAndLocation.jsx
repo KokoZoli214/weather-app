@@ -39,9 +39,9 @@ const TimeAndLocation = ({weather}) => {
   
   return (
     <div className='flex flex-col items-center w-full'>
-        <div className='flex flex-col justify-center items-center bg-blue-400 w-full lg:w-1/2 h-28 text-2xl gap-2 opacity-75 pt-12 lg:pt-0'>
-            <p className='text-xl lg:text-2xl tracking-wider' style={{fontFamily: 'monospace'}}> {formattedTime} </p>
-            <p className='text-2xl'> {name}, {sys?.country} </p>
+        <div className='flex flex-col justify-center items-center bg-blue-400 w-full md:w-5/6 lg:w-1/2 h-28 text-2xl gap-2 opacity-75 pt-12 lg:pt-0'>
+            <p className='text-xl md:text-2xl lg:text-2xl tracking-wider' style={{fontFamily: 'monospace'}}> {formattedTime} </p>
+            <p className='text-2xl md:text-3xl'> {name}, {sys?.country} </p>
         </div>
     </div>
   )
