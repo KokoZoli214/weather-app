@@ -25,13 +25,13 @@ const App = () => {
 
   
   if (!weather) return <div 
-  className="app-container w-screen h-screen flex flex-col justify-center items-center bg-[url('/img/weather1.jpg')] bg-cover bg-center text-amber-50" 
+  className="app-container w-screen h-[100dvh] flex flex-col justify-center items-center bg-[url('/img/weather1.jpg')] bg-cover bg-center text-amber-50" 
   >
     {}
   </div>;
 
   return (
-    <div className="app-container w-screen h-screen flex flex-col justify-center items-center bg-[url('/img/weather1.jpg')] bg-cover bg-center text-amber-50" >
+    <div className="app-container w-screen h-[100dvh] flex flex-col justify-center items-center bg-[url('/img/weather1.jpg')] bg-cover bg-center text-amber-50" >
       <TopButtons setQuery={setQuery}/>
       <Inputs setQuery={setQuery} /> 
       <TimeAndLocation weather={weather} />
