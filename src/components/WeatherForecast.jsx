@@ -72,21 +72,21 @@ const WeatherForecast = ({ query }) => {
   return (
     <div className="flex flex-col h-full sm:h-50 w-full sm:w-1/2 md:w-5/6 lg:w-1/2 bg-blue-400 rounded-b-2xl opacity-75">
       <div className="flex items-center justify-center mt-0">
-        <p className="font-medium sm:text-2xl md:text-3xl lg:text-3xl uppercase">
+        <p className="font-medium sm:text-2xl md:text-3xl lg:text-2xl uppercase">
           6 days forecast
         </p>
       </div>
 
       <hr className="my-1 mb-4 lg:mb-4 mx-6" />
 
-      <div className="flex flex-wrap sm:flex-nowrap gap-y-3 items-center justify-evenly mb-3">
+      <div className="flex flex-wrap sm:flex-nowrap gap-y-1 items-center justify-evenly mb-3">
         {forecast.map((day, index) => (
           <li
             key={index}
             className="w-1/3 sm:w-auto mb-0 flex flex-col items-center justify-between list-none"
           >
             <div className="flex flex-col items-center text-center">
-              <p className="font-medium text-xs md:text-xl lg:text-lg">
+              <p className="font-medium text-[1rem] md:text-[1rem] lg:text-[1.0rem]">
                 {new Date(day.date).toLocaleDateString("en-EN", {
                   weekday: "long",
                   month: "long",
@@ -99,9 +99,9 @@ const WeatherForecast = ({ query }) => {
               <img
                 src={`https://openweathermap.org/img/wn/${day.icon}@2x.png`}
                 alt="weather icon"
-                className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 inline-block"
+                className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-13 lg:h-13 inline-block"
               />
-              <p className="sm:text-xs md:text-lg lg:text-lg">{day.temp_max}°C</p>
+              <p className="sm:text-xs md:text-lg lg:text-[1.1rem]">{day.temp_max}°C</p>
             </div>
           </li>
         ))}
